@@ -23,11 +23,11 @@ jobs:
       
       - name: Merge Upstream changes
         run: |
-          git checkout main
-          git merge upstream/main --no-edit || true  # Ignore merge conflicts for now
+          git checkout master
+          git merge upstream/master --no-edit || true  # Ignore merge conflicts for now
       - name: Push changes to Fork
         run: |
-          git push origin main || true  # Ignore push errors if no changes are made
+          git push origin master || true  # Ignore push errors if no changes are made
       - name: Clean up
         run: |
           git remote remove upstream || true  # Clean up the remote reference
